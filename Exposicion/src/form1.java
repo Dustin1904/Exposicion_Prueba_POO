@@ -17,7 +17,7 @@ public class form1 {
     private JEditorPane editorPane1;
     private JTable table1;
 
-    public form1(JFrame ventanaAnterior) {
+    public form1() {
         String styledText = "<html><body><h1 style='color:blue;'>¡INTEGRANTES</h1>"
                 + "<p style='color:red;'>Este es un JEditorPane con texto enriquecido.</p>"
                 + "<p style='font-size:14px;'>Puedes agregar más texto y estilos aquí.</p></body></html>";
@@ -27,7 +27,6 @@ public class form1 {
         explorarArchivosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 JFileChooser chooser = new JFileChooser();
                 int returnVal = chooser.showOpenDialog(null);
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -58,10 +57,9 @@ public class form1 {
                         frame.pack();
                         frame.setVisible(true);
                     } catch (Exception ex) {
-                        ex.printStackTrace();
+                        System.out.println(ex);
                     }
                 }
-                ventanaAnterior.dispose();
             }
         });
         editorPane1.addComponentListener(new ComponentAdapter() {
@@ -70,9 +68,6 @@ public class form1 {
                 super.componentResized(e);
             }
         });
-    }
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
     }
 }
 

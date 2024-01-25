@@ -9,13 +9,11 @@ public class Main {
         frame.setSize(500,500);
         frame.setVisible(true);*/
 
-        JFrame frame2 = new JFrame("Bienvenida");
-        frame2.setContentPane(new  form2().PantallaP);
-        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame2.pack();
-        frame2.setSize(500,500);
-        frame2.setVisible(true);
-
-
+        JFrame frame = new JFrame("Bienvenida");
+        frame.setContentPane(new form3().PantallaP);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setVisible(true);
     }
 }
