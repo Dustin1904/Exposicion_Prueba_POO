@@ -57,6 +57,12 @@ public class form1 {
                 ventanaAnterior.dispose();
             }
         });
+        //visualizarNotasButton.addActionListener(new ActionListener() {
+            //@Override
+        // public void actionPerformed(ActionEvent e) {
+                //JFileChooser= new JFileChooser();
+            //}
+        //});
     }
     private void createUIComponents() {
         // TODO: place custom component creation code here
