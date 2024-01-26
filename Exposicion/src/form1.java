@@ -310,7 +310,7 @@ public class form1 {
                         "</style>"+
                         "</head>"+
                         "<body>" +
-                        "<h1 class='frame'> JFileChooser </h1>"+
+                        "<h1 class='frame'> JEditorPane </h1>"+
                         "</body>" +
                         "</html>";
         JEditorPaneEditorPane.setContentType("text/html");
