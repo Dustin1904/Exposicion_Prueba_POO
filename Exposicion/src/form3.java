@@ -8,8 +8,9 @@ public class form3 {
     private JEditorPane editorPane;
     JPanel PantallaP;
     private JButton button1;
+    private JButton Next;
 
-    public form3() {
+    public form3(JFrame xd) {
 
         button1.addActionListener(new ActionListener() {
             @Override
@@ -25,19 +26,32 @@ public class form3 {
                                 "font-size:75px;" +
                                 "text-align: center;" +
                                 "padding: 100px 75px" +
+                                "font-family: 'Roboto', sans-serif;"+
+                                "margin: 50px 50px;"+
+                                "color: black;"+
                                 "}" +
                                 ".integrantes{" +
+                                "display: flex;"+
                                 "font-size: 50px;"+
                                 "text-align: center;"+
+                                "font-family: 'Roboto', sans-serif;"+
+                                "color: black;"+
+                                "text-shadow: 2px 2px 2px 10px rgba(232, 226, 221, 0.5);"+
+                                "}"+
+                                ".contenedor{" +
+                                "display: flex;"+
+                                "border: 5px solid;"+
+                                "box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);"+
                                 "}"+
                                 "</style>" +
                                 "</head>" +
                                 "<body>" +
-                                "<img class='logo' src='src/Escudo_de_la_Escuela_Politécnica_Nacional.png'>"+
-                                "<h1 style='color:blue;'>¡INTEGRANTES</h1>"+
+                                "<h1 style='color:blue;'> INTEGRANTES </h1>"+
+                                "<div class='contenedor'>"+
                                 "<p class='integrantes'> * Dustin Marcatoma </p>"+
                                 "<p class='integrantes'> * Brandom Santacruz </p>"+
                                 "<p class='integrantes'> * Silvia Chaluisa </p>"+
+                                "</div>"+
                                 "</body>" +
                                 "</html>";
                 editorPane.setContentType("text/html");
@@ -48,6 +62,18 @@ public class form3 {
                         super.componentResized(e);
                     }
                 });
+            }
+        });
+        Next.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame2 = new JFrame("Programa Grupo 5");
+                frame2.setContentPane(new form1().Programa);
+                frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame2.pack();
+                frame2.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                frame2.setVisible(true);
+                xd.dispose();
             }
         });
     }
