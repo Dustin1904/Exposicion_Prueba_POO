@@ -26,6 +26,7 @@ public class form1 {
     private JEditorPane editorPane13;
     private JEditorPane JSeparatorEditorPane;
     private JEditorPane JEditorPaneEditorPane;
+    private JButton iniciarSesionButton;
     private JScrollBar scrollBar1;
     private JTable table1;
 
@@ -382,6 +383,16 @@ public class form1 {
         editorPane8.addComponentListener(listener1);
         JEditorPaneEditorPane.addComponentListener(listener1);
 
+        iniciarSesionButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame3 = new JFrame("Login xd");
+                frame3.setContentPane(new form2(frame3).log);
+                frame3.getDefaultCloseOperation();
+                frame3.pack();
+                frame3.setExtendedState(JFrame.MAXIMIZED_BOTH);
+            }
+        });
     }
 }
 
